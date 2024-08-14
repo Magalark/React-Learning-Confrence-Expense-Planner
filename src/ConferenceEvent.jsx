@@ -18,16 +18,16 @@ const ConferenceEvent = () => {
 
     const handleAddToCart = (index) => {
         if (venueItems[index].name === "Auditorium Hall (Capacity:200)" && venueItems[index].quantity >= 3) {
-          return; 
+            return; // Prevent further additions
         }
         dispatch(incrementQuantity(index));
-      };
-    
-      const handleRemoveFromCart = (index) => {
+    };
+
+    const handleRemoveFromCart = (index) => {
         if (venueItems[index].quantity > 0) {
-          dispatch(decrementQuantity(index));
+            dispatch(decrementQuantity(index));
         }
-      };
+    };
     const handleIncrementAvQuantity = (index) => {
     };
 
